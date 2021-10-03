@@ -8,6 +8,8 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -19,6 +21,19 @@ header {
     .logo {
         flex-basis: 40%
     }
+
+.sidebar {
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    .search {
+
+        input {
+            display: none;
+        }
+    }
+}
+
 }
 
 main {
@@ -30,7 +45,10 @@ main {
     align-items: center;
     height: calc(100vh - 120px);
     .article {
-        flex-basis: 40%;
+        // flex-basis: 40%;
+        width: 420px;
+        margin-right: 80px;
+
     }
 }
 
@@ -39,14 +57,20 @@ main {
     .gallery {
         height: 80%;
         display: flex;
+        margin-bottom: 60px;
         .card {
             margin-right: 60px;
+            height: 100%;
+            width: 320px;
+        }
+        .card:not(:first-child) {
+            transform: scale(0.9);
         }
     }
 }
 
 .cantrols {
-    width: 100%;
+    width: 700px;
     display: flex;
     justify-content: center;
 }
@@ -55,3 +79,21 @@ main {
     display: flex;
 
 } 
+
+
+.card-photo {
+    background-color: rgba(16, 145, 33, 0.63); 
+    height: 80%;
+    border-radius: 12px;
+}
+
+.card-cout {
+    display: flex;
+    align-items: center;
+    .line {
+        height: 1px;
+        width: 20px;
+        background-color: chartreuse;
+        margin: 0px 6px;
+    }
+}
